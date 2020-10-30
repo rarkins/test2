@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "separateMinorPatch": true,
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["patch"],
+      "groupName": "devDependencies",
+      "automerge": true
+    },
+    {
+      "depTypeList": ["devDependencies"],
+      "updateTypes": ["minor"],
+      "groupName": "devDependencies"
+    },
+    {
+      "depTypeList": ["dependencies"],
+      "updateTypes": ["patch"],
+      "groupName": "Dependencies"
+    }
+  ]
+}
